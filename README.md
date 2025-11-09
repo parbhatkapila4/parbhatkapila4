@@ -1,39 +1,56 @@
-## Parbhat here 👋🏻
+# Parbhat Kapila
 
-I build systems that stay fast under pressure and interfaces that feel effortless to use. My work lives where backend reliability meets product usability - the place where most products succeed or fail.
+Full-stack engineer specializing in production AI infrastructure. I build RAG systems, semantic search platforms, and real-time data pipelines that handle thousands of documents with sub-2-second response times.
 
-## Why Me : 
+## What I've Shipped
 
-I don’t just code - I build products that work under real conditions. I approach problems end-to-end: designing schemas, shaping APIs, creating interfaces, and deploying to production. I move quickly without cutting corners, and every decision I make prioritizes stability, scalability, and user experience.
+**Have made production AI applications** serving real users:
+- Document intelligence processing 10,000+ documents at 99.9% uptime
+- Semantic search with hybrid BM25 + vector similarity across 200+ code repositories  
+- Real-time email indexing with multi-LLM orchestration and automatic fallback (OpenAI → Gemini → Claude)
 
-Ownership sets me apart. I think like a builder, not just a developer - which means I care about shipping features that matter, not just pushing commits.
+**Engineering challenges I solve:**
+- RAG architecture with pgvector and intelligent chunking strategies
+- Multi-provider API orchestration with fallback handling and rate limit management
+- Real-time WebSocket systems with Redis caching, achieving sub-2s query responses
+- Type-safe full-stack applications with tRPC and end-to-end TypeScript
+- CI/CD pipelines on AWS/Vercel with Docker containerization
 
-## What I’ve Built : 
+## Technical Depth
 
-I’ve taken ideas from whiteboard to production, delivering systems that are fast, reliable, and ready to grow:
+**AI & Backend**  
+RAG Architecture • LangChain • OpenAI API • pgvector • Vector Embeddings • Semantic Search  
+Python (FastAPI) • Node.js • PostgreSQL • Redis • Multi-LLM Orchestration
 
-Scalable platform → built with Next.js + Node.js + PostgreSQL to handle growing datasets without performance loss.
+**Frontend & Full-Stack**  
+TypeScript • React • Next.js • tRPC • WebSockets • Real-time Systems
 
-Authentication system → implemented secure login with NextAuth + JWT, balancing strong security with a smooth sign-in flow.
+**Infrastructure**  
+AWS (EC2, S3, Lambda) • Docker • Vercel Edge Runtime • CI/CD • GitHub Actions
 
-Real-time collaboration tool → used WebSockets + Redis to sync live data across multiple users with no noticeable lag.
+**Integrations**  
+OAuth (Gmail API) • Payment Processing (Razorpay/Stripe) • Third-party API orchestration
 
-Production pipeline → set up CI/CD with Docker, AWS, and GitHub Actions to ship code from local dev to live in one push.
+## Track Record
 
-API layer → designed clean services that remained maintainable as traffic and features scaled up.
+- 500+ commits in 2025 (consistent shipping velocity)
+- 99.9% uptime across production systems
+- Sub-2 second response times at scale
+- Processing 10K+ documents in production
+- 80% reduction in developer onboarding time with AI documentation tools
 
-Each of these wasn’t about ticking off tech - it was about building something stable, simple, and scalable.
+## Currently
 
-## Beyond Code: 
+Open to full-time remote roles at startups where I can own technical architecture and ship features that matter. Available with US/EU timezone flexibility.
 
-Good engineering takes a clear head. I reset outdoors - hiking trails, quiet waters, open skies. That same calm focus is what I bring when solving complex system problems: steady, sharp, and reliable.
+## Connect
 
-## Connect :
-
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/parbhat-kapila-a14264202)   [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=twitter&logoColor=white)](https://x.com/@Devcodies)  [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:parbhat@parbhat.dev)  
-
-
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://www.parbhat.dev/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/parbhat-kapila)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/Parbhat03)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:parbhat@parbhat.dev)
 
 
-✨ If you’re building something ambitious and need an engineer who thinks like an owner and executes like a builder, let’s talk.
+---
+
+ **Looking for an engineer who can architect AI systems, integrate complex APIs, and ship production features fast? Let's talk.**
