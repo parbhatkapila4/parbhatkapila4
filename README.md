@@ -33,7 +33,7 @@ OAuth (Gmail API) • Payment Processing (Razorpay/Stripe) • Third-party API o
 
 ## Track Record
 
-- 500+ commits in 2025 (consistent shipping velocity)
+- 600+ commits in 2025 (consistent shipping velocity)
 - 99.9% uptime across production systems
 - Sub-2 second response times at scale
 - Processing 10K+ documents in production
