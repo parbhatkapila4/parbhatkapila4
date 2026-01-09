@@ -11,7 +11,6 @@ Software builder focused on shipping real products and keeping them working once
 
 </div>
 
----
 
 ## About
 
