@@ -75,7 +75,6 @@ Tools I’ve used long enough to know where they help, and where they don’t.
 ![CI/CD](https://img.shields.io/badge/CI/CD-374151?style=flat)
 ![Monitoring](https://img.shields.io/badge/Monitoring-4B5563?style=flat)
 
-_(If it’s not here, I probably wouldn’t want to own it in production.)_
 
 
 ---
