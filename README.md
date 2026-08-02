@@ -36,7 +36,7 @@ All five are mine. I built them, deployed them, and still run them, which is why
 
 ## Stack
 
-TypeScript · React · Next.js · Node · Python · Postgres · pgvector · Redis · BullMQ · Drizzle · Prisma · Docker · AWS · Vercel · OpenRouter · Clerk
+TypeScript · React · Next.js · Node · Large Language Models · Postgres · pgvector · Redis · BullMQ · Drizzle · Prisma · Docker · AWS · Vercel · OpenRouter · Clerk
 
 ---
 
