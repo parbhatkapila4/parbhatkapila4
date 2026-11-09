@@ -4,13 +4,13 @@ AI Systems Engineer. I build retrieval and agent systems on Postgres, and I care
 
 [parbhat.dev](https://www.parbhat.dev/) · [LinkedIn](https://www.linkedin.com/in/parbhat-kapila/) · [X](https://x.com/Parbhat03) · parbhat@parbhat.dev
 
-Open to full-time remote roles. Full overlap with US or EU hours, whichever the team runs on.
+Backend engineer at [FunnelStory](https://funnelstory.ai), working on the Go back end.
 
 ---
 
-## Five systems, deployed
+## Six systems, deployed
 
-All five are mine. I built them, deployed them, and still run them, which is why the notes below are about trade-offs rather than features.
+All six are mine. I built them, deployed them, and still run them, which is why the notes below are about trade-offs rather than features.
 
 **[VectorMail](https://vectormail.space)**. Autonomous email agent. Read and write are separate rails on purpose: search returns cited sources, and an AI reply passes two gates (topic gate, then outbound moderation) before it goes out. The model sits upstream of the gate and is never trusted to be the gate. Automation is dry-run by default. A send-intent marker is written before the provider call, so a retried send parks instead of firing again. Embeddings live as a `vector(768)` column on the email row, which means tenancy is enforced in the same `WHERE` clause as retrieval and there's no second store to keep in sync.
 
@@ -21,6 +21,8 @@ All five are mine. I built them, deployed them, and still run them, which is why
 **[CUTLINE](https://cutline.cloud)**. One sentence in, one finished MP4 out. Eleven to twelve stages on the slideshow path, in a fixed order, each one timed and logged so a failure names the stage that broke. The stages call outside models, so the same prompt gives a different video; what's fixed is the order and the boundaries. Pipeline over agent, deliberately: no templates, no creative knobs, no model deciding the control flow. Next.js control plane on Vercel with a separate long-running BullMQ worker and Redis as the coordination backbone. Each shot walks Unsplash, then Pexels, then DALL-E 3, then a placeholder, and on a paid plan the job fails outright if more than half the shots end on the placeholder. Payment webhook events are claimed in Postgres with `INSERT ... ON CONFLICT DO NOTHING` before a plan is granted, so a replayed event is ignored.
 
 **[Visura](https://visura.parbhat.dev)**. Versioned document processing. Chunks are keyed by SHA-256, and a chunk whose hash still matches reuses its summary instead of paying the model again. The catch I found later: chunk boundaries depend on all the text before them, so an edit near the start shifts everything after it and reuses almost nothing. That one is on the list. A replay skips chunks that are already done, so re-running a stuck version doesn't re-pay for finished work.
+
+**[Synapse](https://synpese.com)**. Company brain as an MCP server. It reads a team's Slack, pulls out the rules people actually work by, and serves each one as a typed tool an agent can call, like `get_refund_policy()`, so the agent stops guessing at internal policy. A thread is hashed together with the model, prompt and schema that read it, so an unchanged thread is never extracted twice. Rate limits fail open and spend caps fail closed. When a nightly run would go over the model-call cap, it extracts the newest threads, leaves the rest for the next night, and keeps 10% of the cap free for agents' tool calls. The weak spot: rule text comes from whoever posts in the channel and ends up inside tool descriptions. A check stops about 8 of 10 crafted injection attacks, not all of them. It's invite-only because Slack limits apps outside its Marketplace to one history request a minute.
 
 ---
 
@@ -36,7 +38,7 @@ All five are mine. I built them, deployed them, and still run them, which is why
 
 ## Stack
 
-TypeScript · React · Next.js · Node · Postgres · pgvector · Redis · BullMQ · Drizzle · Prisma · Docker · Vercel · OpenRouter · Clerk
+TypeScript · Go · React · Next.js · Node · Postgres · pgvector · Redis · BullMQ · Drizzle · Prisma · Docker · Vercel · OpenRouter · Clerk
 
 ---
 
